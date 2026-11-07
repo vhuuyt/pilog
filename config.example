@@ -1,0 +1,61 @@
+# pilog 工具分级配置 (~/.config/pilog/config)
+#
+# ── 1) 工具分级：按「调用了哪个工具」决定命令行背景 ──
+# 语法: <danger|normal|plain> <工具名>
+#   danger = 红底（危险 / 写入类）   normal/plain = 不着色
+# 未列出的工具默认不着色。
+danger write
+danger edit
+normal read
+normal bash
+
+# ── 2) bash 命令启发式 ──
+# on 时，按下面的关键词把危险命令升级为红底（safe 命中优先）。
+bash_heuristic on
+
+# 危险关键词（按你历史会话实际用到的命令整理，可自行增删）
+bash_danger sudo
+bash_danger rm
+bash_danger pkill
+bash_danger kill
+bash_danger killall
+bash_danger chmod
+bash_danger chown
+bash_danger chgrp
+bash_danger systemctl
+bash_danger mv
+bash_danger dd
+bash_danger mkfs
+bash_danger mount
+bash_danger umount
+bash_danger crontab
+bash_danger passwd
+bash_danger useradd
+bash_danger userdel
+bash_danger shutdown
+bash_danger reboot
+bash_danger shred
+bash_danger truncate
+bash_danger tee
+
+# 安全命令（首个词命中则一律不判危险）
+bash_safe ls
+bash_safe cat
+bash_safe echo
+bash_safe cd
+bash_safe grep
+bash_safe ps
+bash_safe pgrep
+bash_safe which
+bash_safe file
+bash_safe env
+bash_safe export
+bash_safe head
+bash_safe tail
+bash_safe wc
+bash_safe sort
+bash_safe uniq
+bash_safe rpm
+bash_safe rpmspec
+bash_safe gsettings
+bash_safe ibus
