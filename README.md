@@ -1,5 +1,9 @@
 # pilog
 
+[![Release](https://img.shields.io/github/v/release/vhuuyt/pilog)](https://github.com/vhuuyt/pilog/releases/latest)
+[![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+[![Rust](https://img.shields.io/badge/rust-2021-orange.svg)](https://www.rust-lang.org)
+
 > pi 会话日志查看器 / 导出工具（TUI） — Rust 版
 >
 > 浏览、搜索、导出 [pi](https://github.com/earendil-works/pi) 编码助手的会话记录，单文件实现，零额外服务依赖。
@@ -52,6 +56,14 @@ Copy-Item target\release\pilog.exe $env:USERPROFILE\bin\
 
 ```bash
 cargo run --release -- --list
+```
+
+### Linux 预编译二进制
+
+```bash
+# 从 https://github.com/vhuuyt/pilog/releases 下载 pilog-linux-x86_64
+chmod +x pilog-linux-x86_64
+mv pilog-linux-x86_64 ~/.local/bin/pilog
 ```
 
 ## 使用

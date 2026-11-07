@@ -1,5 +1,9 @@
 # pilog
 
+[![Release](https://img.shields.io/github/v/release/vhuuyt/pilog)](https://github.com/vhuuyt/pilog/releases/latest)
+[![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+[![Rust](https://img.shields.io/badge/rust-2021-orange.svg)](https://www.rust-lang.org)
+
 > A TUI viewer / exporter for [pi](https://github.com/earendil-works/pi) coding-agent sessions.
 >
 > Single-file Rust implementation — no server, no database, just your session logs.
@@ -44,6 +48,9 @@ Windows (PowerShell):
 cargo build --release
 Copy-Item target\release\pilog.exe $env:USERPROFILE\bin\
 ```
+
+Prebuilt Linux binary: download `pilog-linux-x86_64` from the
+[releases page](https://github.com/vhuuyt/pilog/releases/latest).
 
 ## Usage
 
